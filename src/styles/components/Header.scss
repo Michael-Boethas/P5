@@ -3,9 +3,15 @@
 
 .header {
     display: flex;
+    flex-flow: column;
     justify-content: space-between;
     align-items: center;
-    background: $header-color;
+    color: $header-text-color;
+    background: $header-bg-color;
+    padding: 20px;
+    @media screen and (min-width:360px) {
+        flex-flow: row;
+    };
     .header__logo {
         width: 35%;
         min-width: 145px;

@@ -10,7 +10,7 @@ function App() {
 	return (
 		<div className="App">
 			<Header />
-			<main>
+			<main className="main">
 				{/* <Routes> */}
 					{/* <Route path="/" element={<Home />} /> */}
 					{/* <Route path="/about" element={<About />} /> */}
@@ -18,7 +18,7 @@ function App() {
 					{/* <Route path="*" element={<Error404 />} />          Wildcard pour toutes les routes invalides */}
 				{/* </Routes> */}
 			</main>
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 }

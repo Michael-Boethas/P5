@@ -10,12 +10,12 @@ particuliers en France. Ce projet vise à moderniser l'interface utilisateur en 
 complète : Node.js pour le back-end et React pour le front-end. La refonte inclut également l'application des 
 nouvelles maquettes fournies via Figma.
 
-# 🛠 Outils 
+# 🛠 Technologies  
 
 - npm : Gestionnaire de packages pour installer les dépendances JavaScript.
-- Node.js : Environnement d'exécution JavaScript.
-- React : Bibliothèque pour le front-end.
-- CRA : Utilisé pour initialiser et configurer l'application React.
-- React Router : Utilisé pour gérer le routage de l'application.
-- Sass : Pour structurer le CSS 
-
+- Node.js (v20.15.0) : Environnement d'exécution JavaScript.
+- React (18.3.1) : Bibliothèque pour le front-end.
+- CRA (5.0.1) : Utilisé pour initialiser et configurer l'application React.
+- React Router (6.24.0) : Utilisé pour gérer le routage de l'application.
+- Sass (1.77.6) : Pour structurer le CSS.
+- ESLint (8.57.0) : Pour encourager une syntaxe et des conventions de codage cohérentes.
