@@ -10,14 +10,14 @@ function App() {
 	return (
 		<div className="App">
 			<Header />
-			{/* <main> */}
+			<main>
 				{/* <Routes> */}
 					{/* <Route path="/" element={<Home />} /> */}
 					{/* <Route path="/about" element={<About />} /> */}
 					{/* <Route path="/rental/:id" element={< RentalSheet />} /> */}
 					{/* <Route path="*" element={<Error404 />} />          Wildcard pour toutes les routes invalides */}
 				{/* </Routes> */}
-			{/* </main> */}
+			</main>
 			{/* <Footer /> */}
 		</div>
 	);

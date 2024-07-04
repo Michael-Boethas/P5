@@ -1,0 +1,17 @@
+@import "../utils/_variables.scss";
+@import "../utils/_colors.scss";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $header-color;
+    .header__logo {
+        width: 35%;
+        min-width: 145px;
+        @media screen and (min-width:$sm) {
+            width: 210px;
+            padding: 10px 0;
+        }
+    }
+}

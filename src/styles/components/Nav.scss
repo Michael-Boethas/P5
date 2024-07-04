@@ -1,0 +1,24 @@
+@import "../utils/variables.scss";
+
+.header__nav {
+    display: flex;
+    gap: 26px;
+    padding: 15px;
+    .nav__link-home,
+    .nav__link-about {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+        &:hover {
+            text-decoration: underline;
+        }
+        @media screen and (min-width:$sm) {
+            text-transform: lowercase;
+            font-size: 1.8rem;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+    }
+}

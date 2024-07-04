@@ -1,13 +1,12 @@
 import logo from "../../assets/logo.svg";
+import Nav from "../../components/Nav/Nav";
+import "../../styles/components/Header.scss";
 
 export default function Header() {
-    return (
-        <>
-            <div>
-                <img src={logo} alt="Logo" />
-            </div>
-        </>
-    )
+  return (
+    <header className="header">
+      <img className="header__logo" src={logo} alt="Logo" />
+      <Nav />
+    </header>
+  );
 }
-
-
