@@ -18,4 +18,4 @@ nouvelles maquettes fournies via Figma.
 - CRA (5.0.1) : Utilisé pour initialiser et configurer l'application React.
 - React Router (6.24.0) : Utilisé pour gérer le routage de l'application.
 - Sass (1.77.6) : Pour structurer le CSS.
-- ESLint (8.57.0) : Pour encourager une syntaxe et des conventions de codage cohérentes.
+- ESLint (8.57.0) et Prettier (9.7.0): Pour des conventions de codage cohérentes.

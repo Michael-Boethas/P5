@@ -1,0 +1,30 @@
+@import "../utils/_variables.scss";
+@import "../utils/_colors.scss";
+@import "../utils/mixins";
+
+.home__banner {
+    @include banner-template("../../assets/home-banner-mobile.png");
+
+    @media (min-width: $sm) {
+        background-image: url("../../assets/home-banner.png");
+    }
+
+    .home__banner--overlay {
+        @include banner-dimensions;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        font-size: 24px;
+        font-weight: 700;
+        color: $home-banner-txt-color;
+        background: rgb(0, 0, 0, $home-banner-opacity);
+
+        .home__banner-txt {
+            width: 230px;
+            @media screen and (min-width: $sm) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}

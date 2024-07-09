@@ -9,12 +9,15 @@
     color: $header-text-color;
     background: $header-bg-color;
     padding: 20px;
-    @media screen and (min-width:360px) {
+
+    @media screen and (min-width:375px) {
         flex-flow: row;
-    };
+    }
+
     .header__logo {
         width: 35%;
         min-width: 145px;
+
         @media screen and (min-width:$sm) {
             width: 210px;
             padding: 10px 0;

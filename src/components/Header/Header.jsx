@@ -1,6 +1,6 @@
 import logo from "../../assets/logo.svg";
 import Nav from "../../components/Nav/Nav";
-import "../../styles/components/Header.scss";
+import "../../styles/components/_Header.scss";
 
 export default function Header() {
   return (

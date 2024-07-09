@@ -1,23 +1,25 @@
 @import "../utils/_variables.scss";
 @import "../utils/_colors.scss";
+@import "../utils/_mixins.scss";
 
 .footer {
+    @include flex-center;
+    flex-flow: column;
     background: $footer-bg-color;
     color: $footer-text-color;
     font-size: 1.2rem;
     height: 209px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
+
     @media screen and (min-width:$sm) {
         justify-content: flex-end;
     }
     .footer__copyright {
         max-width: 100px;
+        padding: 10px 0;
         @media screen and (min-width: $sm) {
             max-width: unset;
             font-size: 2.4rem;
+            padding: 40px 0 20px 0;
         }
     }
 }

@@ -1,5 +1,5 @@
 import logo from "../../assets/logo-white.svg";
-import "../../styles/components/Footer.scss";
+import "../../styles/components/_Footer.scss";
 
 export default function Header() {
     return (
