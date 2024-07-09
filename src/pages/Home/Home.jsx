@@ -4,7 +4,7 @@ import Gallery from "../../components/Gallery/Gallery.jsx";
 export default function Home() {
   return (
     <>
-      <Banner />
+      <Banner page="home" />
       <Gallery />
     </>
   );

@@ -17,7 +17,7 @@ function App() {
       <main className="main">
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/about" element={<About />} />
           <Route path="/rental/:id" element={<RentalPage />} />
           {/* <Route path="*" element={<Error404 />} />          Wildcard pour toutes les routes invalides */}
         </Routes>

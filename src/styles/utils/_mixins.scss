@@ -22,3 +22,7 @@
     background-image: url($imgUrl);
     background-size: cover;
 }
+
+@mixin banner-opacity($opacity) {
+    background: rgba(0, 0, 0, $opacity);
+}

@@ -1,10 +1,15 @@
 import "../../styles/components/_Banner.scss";
 
-export default function Banner() {
+export default function Banner({ page }) {
+  // "page" props pour adapter la bannière sur Home.jsx et About.jsx
   return (
-    <div className="home__banner">
-      <div className="home__banner--overlay">
-        <p className="home__banner-txt">Chez vous, partout et ailleurs</p>
+    <div className={`${page}__banner`}>
+      <div className={`${page}__banner--overlay`}>
+        {page === "home" ? (
+          <h1 className={`${page}__banner-txt`}>
+            Chez vous, partout et ailleurs
+          </h1>
+        ) : null}
       </div>
     </div>
   );
