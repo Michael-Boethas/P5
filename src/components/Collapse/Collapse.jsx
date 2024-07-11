@@ -1,4 +1,9 @@
+import React from "react";
 import { useState } from "react";
+import PropTypes from "prop-types";
+import iconUrl from "../../assets/dropdown-collapsed.svg"
+import "../../styles/components/_Collapse.scss"
+
 
 export default function Collapse({ data }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -6,22 +11,35 @@ export default function Collapse({ data }) {
   function toggleIsCollapsed() {
     setIsCollapsed(!isCollapsed);
   }
+  
+  const boxAnimation = isCollapsed
+    ? "expandAboutSection"
+    : "collapseAboutSection";
 
-  const iconUrl = isCollapsed
-    ? "../../assets/dropdown-collapsed.svg"
-    : "../../assets/dropdown-expanded.svg";
+  const iconAnimation = isCollapsed
+    ? "rotateIconCCW"
+    : "rotateIconCW";
+
   return (
     <>
-      <div>
+      <div className="heading-block">
         <h2 className={`about__${data.heading}`}>{data.heading}</h2>
         <button
-          className="collapsible__button"
+          className="collapse-button"
           onClick={toggleIsCollapsed}
         >
-          <img src={iconUrl} alt="toggle icon" />
+          <img className={`collapsible-button__icon ${iconAnimation}`} src={iconUrl} alt="toggle icon" />
         </button>
       </div>
-      <p className={`about__${data.heading}`}>{data.text}</p>
+      <p className={`about__${data.heading} ${boxAnimation}`}>{data.text}</p>
     </>
   );
 }
+
+
+Collapse.propTypes = {
+  data: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  }).isRequired,
+};

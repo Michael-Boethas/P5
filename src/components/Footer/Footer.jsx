@@ -1,3 +1,4 @@
+import React from "react";
 import logo from "../../assets/logo-white.svg";
 import "../../styles/components/_Footer.scss";
 

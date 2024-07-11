@@ -1,14 +1,16 @@
+import React from "react";
 import Banner from "../../components/Banner/Banner.jsx";
 import Collapse from "../../components/Collapse/Collapse.jsx";
 import aboutList from "../../data/about.json";
+import "../../styles/pages/_About.scss"
 
 export default function About() {
   return (
     <>
       <Banner page="about" />
       <section className="about-section">
-        {aboutList.map((aboutInfo) => (
-          <Collapse key={aboutInfo.heading} data={aboutInfo} />
+        {aboutList.map((aboutSection) => (
+          <Collapse key={aboutSection.heading} data={aboutSection} />
         ))}
       </section>
     </>
