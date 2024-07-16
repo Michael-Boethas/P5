@@ -4,24 +4,20 @@ import PropTypes from "prop-types";
 import iconUrl from "../../assets/dropdown-collapsed.svg";
 
 export default function Collapse({ data }) {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(null); // Pour éviter les animations dès le chargement de la page
 
   function toggleIsCollapsed() {
     setIsCollapsed(!isCollapsed);
   }
 
-  const boxAnimation = isCollapsed
-    ? "section--collapsed"
-    : "section--expanded";
+  const boxAnimation = isCollapsed ? "section--expanded" : "section--collapsed";
 
-  const iconAnimation = isCollapsed 
-    ? "icon--collapsed"
-    : "icon--expanded";
+  const iconAnimation = isCollapsed ? "icon--expanded" : "icon--collapsed";
 
   return (
     <>
-      <div className="about__heading-block">
-        <h2 className={`about__heading`}>{data.heading}</h2>
+      <div className="collapse__heading-block">
+        <h2 className={`collapse__heading`}>{data.heading}</h2>
         <button className="collapse-button" onClick={toggleIsCollapsed}>
           <img
             className={`collapse-button__icon ${iconAnimation}`}
@@ -30,7 +26,7 @@ export default function Collapse({ data }) {
           />
         </button>
       </div>
-      <p className={`about__text ${boxAnimation}`}>{data.text}</p>
+      <p className={`collapse__text ${boxAnimation}`}>{data.text}</p>
     </>
   );
 }

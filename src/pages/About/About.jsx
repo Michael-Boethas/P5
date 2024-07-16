@@ -1,6 +1,6 @@
 import React from "react";
-import Banner from "../../components/Banner/Banner.jsx";
-import Collapse from "../../components/Collapse/Collapse.jsx";
+import Banner from "../../components/Banner/Banner";
+import Collapse from "../../components/Collapse/Collapse";
 import aboutList from "../../data/about.json";
 
 export default function About() {

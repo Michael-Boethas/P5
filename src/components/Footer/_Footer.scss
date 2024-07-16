@@ -1,22 +1,22 @@
 .footer {
-    @include flex-center;
-    flex-flow: column;
-    background: $footer-bg-color;
-    color: $footer-text-color;
-    font-size: 1.2rem;
-    height: 209px;
-    width: 100%;
-    
-    @media screen and (min-width:$sm) {
-        justify-content: flex-end;
+  @include flex-center;
+  flex-flow: column;
+  background: $footer-bg-color;
+  color: $footer-text-color;
+  font-size: 1.2rem;
+  height: 209px;
+  width: 100%;
+
+  @media screen and (min-width: $sm) {
+    justify-content: flex-end;
+  }
+  .footer__copyright {
+    max-width: 100px;
+    padding: 10px 0;
+    @media screen and (min-width: $sm) {
+      max-width: unset;
+      font-size: 2.4rem;
+      padding: 40px 0 20px 0;
     }
-    .footer__copyright {
-        max-width: 100px;
-        padding: 10px 0;
-        @media screen and (min-width: $sm) {
-            max-width: unset;
-            font-size: 2.4rem;
-            padding: 40px 0 20px 0;
-        }
-    }
+  }
 }

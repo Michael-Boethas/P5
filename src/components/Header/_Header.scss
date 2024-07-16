@@ -1,25 +1,25 @@
 .header {
-    display: flex;
-    flex-flow: column;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  color: $header-text-color;
+  background: $header-bg-color;
+  padding: 20px;
+  width: 100%;
+
+  @media screen and (min-width: 375px) {
+    flex-flow: row;
     justify-content: space-between;
-    align-items: center;
-    color: $header-text-color;
-    background: $header-bg-color;
-    padding: 20px;
-    width: 100%;
+  }
 
-    @media screen and (min-width:375px) {
-        flex-flow: row;
-        justify-content: space-between;
+  .header__logo {
+    width: 35%;
+    min-width: 145px;
+
+    @media screen and (min-width: $sm) {
+      width: 210px;
+      padding: 10px 0;
     }
-
-    .header__logo {
-        width: 35%;
-        min-width: 145px;
-
-        @media screen and (min-width:$sm) {
-            width: 210px;
-            padding: 10px 0;
-        }
-    }
+  }
 }

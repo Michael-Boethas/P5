@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <div className="viewport-warning">
-        <span className="viewport-warning__icon">⚠️</span>Cette page n&#39;est pas
-        optimisée pour les écrans de largeur inférieure à 320px
+        <span className="viewport-warning__icon">⚠️</span>Cette page n&#39;est
+        pas optimisée pour les écrans de largeur inférieure à 320px
       </div>
       <Header />
       <main className="main">

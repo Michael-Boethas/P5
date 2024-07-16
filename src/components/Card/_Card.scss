@@ -1,46 +1,46 @@
 .gallery__card {
-    position: relative;
-    width: calc(100vw - 40px);
-    min-width: 315px;
-    height: 255px;
+  position: relative;
+  width: calc(100vw - 40px);
+  min-width: 315px;
+  height: 255px;
 
-    @media screen and (min-width: $sm) {
-        min-width: unset;
-        width: 40vw;
-        height: 250px;
-    }
+  @media screen and (min-width: $sm) {
+    min-width: unset;
+    width: 40vw;
+    height: 250px;
+  }
 
-    @media screen and (min-width: $lg) {
-        width: 28vw;
-        height: 300px;
-    }
+  @media screen and (min-width: $lg) {
+    width: 28vw;
+    height: 300px;
+  }
 
-    @media screen and (min-width: $xl) {
-        width: 340px;
-        height: 340px;
-    }
+  @media screen and (min-width: $xl) {
+    width: 340px;
+    height: 340px;
+  }
 
-    .card__img-preview {
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        object-fit: cover;
-    }
+  .card__img-preview {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
 
-    .card__caption {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-start;
-        color: #fff;
-        font-size: 1.8rem;
-        font-weight: 700;
-        background: $card-overlay-gradient;
-        border-radius: 10px;
-        padding: 10px;
-    }
+  .card__caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: $card-overlay-gradient;
+    border-radius: 10px;
+    padding: 10px;
+  }
 }

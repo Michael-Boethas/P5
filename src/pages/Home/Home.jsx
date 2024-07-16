@@ -1,6 +1,6 @@
 import React from "react";
-import Banner from "../../components/Banner/Banner.jsx";
-import Gallery from "../../components/Gallery/Gallery.jsx";
+import Banner from "../../components/Banner/Banner";
+import Gallery from "../../components/Gallery/Gallery";
 
 export default function Home() {
   return (
