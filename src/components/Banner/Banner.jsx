@@ -1,5 +1,4 @@
-import "../../styles/components/_Banner.scss";
-
+import React from "react";
 export default function Banner({ page }) {
   // "page" props pour adapter la bannière sur Home.jsx et About.jsx
   return (

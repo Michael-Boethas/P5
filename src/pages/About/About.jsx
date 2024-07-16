@@ -2,7 +2,6 @@ import React from "react";
 import Banner from "../../components/Banner/Banner.jsx";
 import Collapse from "../../components/Collapse/Collapse.jsx";
 import aboutList from "../../data/about.json";
-import "../../styles/pages/_About.scss"
 
 export default function About() {
   return (

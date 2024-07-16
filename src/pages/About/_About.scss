@@ -1,0 +1,49 @@
+.about-section {
+    padding: 19px 0;
+}
+
+.about__heading-block {
+    display: flex;
+    justify-content: space-between;
+    color: $collapsible-text-color;
+    background: $kasa-red;
+    border-radius: 5px;
+    height: 30px;
+    padding: 10px 10px 0 10px;
+    font-size: 0.86rem;
+
+    @media screen and (min-width: $sm) {
+        margin: 0 10%;
+        height: 54px;
+        font-size: 1.5rem;
+    }
+}
+
+.collapse-button__icon {
+    width: 16px;
+    height: 9px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: $sm) {
+        width: 24px;
+        height: 13px;
+    }
+}
+
+.about__text {
+    max-height: 0;
+    overflow: hidden;
+    background: $content-bg-color;
+    margin: 0 0 20px 0;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding-inline: 10px;
+
+    @media screen and (min-width: $sm) {
+        margin: 0 10% 20px 10%;
+        font-size: 1.6rem;
+    }
+}

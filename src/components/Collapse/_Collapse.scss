@@ -1,0 +1,39 @@
+@keyframes counterClockWise180 {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes clockWise180 {
+    from {
+        transform: rotate(-180deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}
+
+.section--collapsed {
+    transition: padding-block 400ms ease;
+    max-height: 0;
+    padding-block: 0;
+}
+
+.section--expanded {
+    transition: max-height 600ms ease, padding-block 600ms ease;
+    max-height: 500px;
+    padding-block: 10px;
+}
+
+.icon--collapsed {
+    animation: clockWise180 600ms forwards;
+}
+
+.icon--expanded {
+    animation: counterClockWise180 600ms forwards;
+}

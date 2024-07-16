@@ -1,3 +1,4 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -10,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <div className="viewport-warning">
-        <span className="viewport-warning__icon">⚠️</span>Cette page n'est pas
+        <span className="viewport-warning__icon">⚠️</span>Cette page n&#39;est pas
         optimisée pour les écrans de largeur inférieure à 320px
       </div>
       <Header />
@@ -19,7 +20,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/rental/:id" element={<RentalPage />} />
-          {/* <Route path="*" element={<Error404 />} />          Wildcard pour toutes les routes invalides */}
+          <Route path="*" element={<Error404 />} />
+          <Route path="/rental/*" element={<Error404 />} />
         </Routes>
       </main>
       <Footer />

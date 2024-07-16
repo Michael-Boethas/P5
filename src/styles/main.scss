@@ -1,6 +1,30 @@
 
-@import "./utils/_mixins.scss";
-@import "./utils/_variables.scss";
-@import "./utils/_colors.scss";
-@import "./base/_typography.scss";
-@import "./base/_global.scss";
+// General ////////////////////////////////
+
+@import "./base/typography";
+@import "./utils/variables";
+@import "./utils/colors";
+@import "./utils/mixins";
+@import "./base/global";
+
+// Pages //////////////////////////////////
+
+@import "../pages/About/About";
+@import "../pages/Error404/Error404";
+
+// Composants /////////////////////////////
+
+@import "../components/Banner/Banner";
+@import "../components/Card/Card";
+@import "../components/Caroussel/Caroussel";
+@import "../components/Collapse/Collapse";
+// @import "../components/Error/Error";
+@import "../components/Footer/Footer";
+@import "../components/Gallery/Gallery";
+@import "../components/Header/Header";
+@import "../components/Host/Host";
+@import "../components/Nav/Nav";
+@import "../components/Rating/Rating";
+@import "../components/Tag/Tag";
+
+

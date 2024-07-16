@@ -1,7 +1,3 @@
-@import "../utils/_colors.scss";
-@import "../utils/mixins";
-
-
 .gallery {
     @include flex-center;
     flex-direction: column;
@@ -17,7 +13,7 @@
         justify-items: center;
         align-items: center;
         border-radius: 25px;
-        background: $gallery-bg-desktop;
+        background: $content-bg-color;
         padding: 50px;
     }
 
