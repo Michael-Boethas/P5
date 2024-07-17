@@ -9,7 +9,11 @@ export default function About() {
       <Banner page="about" />
       <section className="about-section">
         {aboutList.map((aboutSection) => (
-          <Collapse key={aboutSection.heading} data={aboutSection} />
+          <Collapse
+            key={aboutSection.heading}
+            heading={aboutSection.heading}
+            text={aboutSection.text}
+          />
         ))}
       </section>
     </>

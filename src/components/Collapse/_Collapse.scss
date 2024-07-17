@@ -6,7 +6,9 @@
   border-radius: 5px;
   height: 30px;
   padding: 10px 10px 0 10px;
-  font-size: 0.86rem;
+  .collapse__heading {
+    font-size: 1.3rem;
+  }
 
   @media screen and (min-width: $sm) {
     margin: 0 10%;
@@ -36,6 +38,7 @@
   margin: 0 0 20px 0;
   border-radius: 5px;
   font-size: 1.2rem;
+  line-height: 142.6%;
   padding-inline: 10px;
 
   @media screen and (min-width: $sm) {

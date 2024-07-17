@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 export default function Banner({ page }) {
   // "page" props pour adapter la bannière sur Home.jsx et About.jsx
   return (
@@ -13,3 +14,7 @@ export default function Banner({ page }) {
     </div>
   );
 }
+
+Banner.propTypes = {
+  page: PropTypes.string.isRequired,
+};

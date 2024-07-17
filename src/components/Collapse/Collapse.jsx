@@ -3,7 +3,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import iconUrl from "../../assets/dropdown-collapsed.svg";
 
-export default function Collapse({ data }) {
+export default function Collapse({ heading, text }) {
   const [isCollapsed, setIsCollapsed] = useState(null); // Pour éviter les animations dès le chargement de la page
 
   function toggleIsCollapsed() {
@@ -17,7 +17,7 @@ export default function Collapse({ data }) {
   return (
     <>
       <div className="collapse__heading-block">
-        <h2 className={`collapse__heading`}>{data.heading}</h2>
+        <h2 className={`collapse__heading`}>{heading}</h2>
         <button className="collapse-button" onClick={toggleIsCollapsed}>
           <img
             className={`collapse-button__icon ${iconAnimation}`}
@@ -26,14 +26,12 @@ export default function Collapse({ data }) {
           />
         </button>
       </div>
-      <p className={`collapse__text ${boxAnimation}`}>{data.text}</p>
+      <div className={`collapse__text ${boxAnimation}`}>{text}</div>
     </>
   );
 }
 
 Collapse.propTypes = {
-  data: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-  }).isRequired,
+  heading: PropTypes.string.isRequired,
+  text: PropTypes.object.isRequired,
 };

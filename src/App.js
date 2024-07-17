@@ -21,7 +21,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/rental/:id" element={<RentalPage />} />
           <Route path="*" element={<Error404 />} />
-          <Route path="/rental/*" element={<Error404 />} />
         </Routes>
       </main>
       <Footer />
