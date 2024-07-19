@@ -13,7 +13,7 @@ export default function Rating({ rating }) {
     }
   }
 
-  return <span className="rental__rating">{stars}</span>;
+  return <span className="rental-page__rating">{stars}</span>;
 }
 
 Rating.propTypes = {

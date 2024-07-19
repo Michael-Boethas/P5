@@ -7,9 +7,9 @@ import rentalsList from "../../data/logements.json";
 import Slideshow from "../../components/Slideshow/Slideshow";
 
 export default function RentalPage() {
-  const { id } = useParams();
+  const { rentalId } = useParams();
 
-  const rentalInfo = rentalsList.find((rental) => rental.id === id);
+  const rentalInfo = rentalsList.find((rental) => rental.id === rentalId);
   // Découpage du tableau en une liste pour l'affichage
   const equipmentsList = rentalInfo.equipments.map((equipment, index) => (
     <li key={index}>{equipment}</li>
@@ -18,23 +18,28 @@ export default function RentalPage() {
   return (
     <>
       <Slideshow pictures={rentalInfo.pictures} />
-      <section className="rental__info-section">
-        <div className="rental__title-tags-container">
-          <h1 className="rental__title">{rentalInfo.title}</h1>
-          <span className="rental__location">{rentalInfo.location}</span>
-          <div className="rental__tags-container">
-            {rentalInfo.tags.map((tag, index) => (
-              <span className="rental__tag" key={index}>
-                {tag}
-              </span>
-            ))}
+      <section className="rental-page__info-section">
+        <div className="rental-page__summary">
+          <header className="rental-page__header">
+            <h1 className="rental-page__title">{rentalInfo.title}</h1>
+            <span className="rental-page__location">{rentalInfo.location}</span>
+            <div className="rental-page__tags">
+              {rentalInfo.tags.map((tag, index) => (
+                <span className="rental-page__tag" key={index}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </header>
+          <div className="rental-page__host-rating">
+            <Rating rating={rentalInfo.rating} />
+            <Host
+              name={rentalInfo.host.name}
+              picture={rentalInfo.host.picture}
+            />
           </div>
         </div>
-        <div className="rental__host-rating-container">
-          <Rating rating={rentalInfo.rating} />
-          <Host name={rentalInfo.host.name} picture={rentalInfo.host.picture} />
-        </div>
-        <div className="rental__collapse-container">
+        <div className="rental-page__collapse-container">
           <Collapse
             heading="Description"
             text={<p>{rentalInfo.description}</p>}

@@ -1,6 +1,9 @@
-.rental__rating {
+.rental-page__rating {
   img {
     height: 13px;
     padding-right: 5px;
+    @media screen and (min-width: $sm) {
+      height: 24px;
+    }
   }
 }

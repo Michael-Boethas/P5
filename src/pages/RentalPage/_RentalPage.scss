@@ -1,4 +1,4 @@
-.rental__info-section {
+.rental-page__info-section {
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -6,61 +6,93 @@
   flex-grow: 1;
   gap: 15px;
 
-  .rental__title-tags-container {
+  .rental-page__summary {
+    width: 100%;
     display: flex;
     flex-flow: column;
     gap: 15px;
 
-    .rental__title {
-      font-family: Montserrat;
-      font-size: 1.8rem;
-      font-weight: 500;
-      color: $kasa-red;
+    @media screen and (min-width: $sm) {
+      flex-flow: row;
+      justify-content: space-between;
     }
 
-    .rental__location {
-      font-family: Montserrat;
-      font-size: 1.4rem;
-      font-weight: 500;
-    }
-
-    .rental__tags-container {
+    .rental-page__header {
       display: flex;
-      flex-flow: row wrap;
-      gap: 10px;
+      flex-flow: column;
+      gap: 5px;
+      @media screen and (min-width: $sm) {
+        margin-bottom: 10px;
+      }
 
-      .rental__tag {
-        background: $kasa-red;
-        text-align: center;
-        padding: 5px 10px;
-        border-radius: 7px;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 700;
-        min-width: 84px;
+      .rental-page__title {
+        font-family: Montserrat;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $kasa-red;
+        @media screen and (min-width: $sm) {
+          font-size: 3.6rem;
+        }
+      }
+
+      .rental-page__location {
+        font-family: Montserrat;
+        font-size: 1.4rem;
+        font-weight: 500;
+        @media screen and (min-width: $sm) {
+          font-size: 1.8rem;
+          padding-bottom: 10px;
+        }
+      }
+
+      .rental-page__tags {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 10px;
+        margin: 5px;
+
+        .rental-page__tag {
+          background: $kasa-red;
+          text-align: center;
+          padding: 5px 10px;
+          border-radius: 7px;
+          color: #fff;
+          font-size: 1rem;
+          font-weight: 700;
+          min-width: 84px;
+          @media screen and (min-width: $sm) {
+            min-width: 115px;
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+
+    .rental-page__host-rating {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (min-width: $sm) {
+        width: fit-content;
+        flex-flow: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 15px;
       }
     }
   }
 
-  .rental__host-rating-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @media screen and (min-width: $sm) {
-      flex-flow: column-reverse;
-    }
-  }
-
-  .rental__collapse-container {
+  .rental-page__collapse-container {
     display: flex;
     flex-flow: column;
+
     @media screen and (min-width: $sm) {
       display: flex;
       flex-flow: row;
-      justify-content: center;
-      gap: 100px;
+      justify-content: space-between;
+      gap: 60px;
     }
   }
 }

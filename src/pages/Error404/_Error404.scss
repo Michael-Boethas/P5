@@ -3,11 +3,14 @@
   height: 100%;
   display: flex;
   flex-flow: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   flex-grow: 1;
+  @media screen and (min-width: $sm) {
+    gap: 50px;
+  }
 
-  .error-404 {
+  .error-code {
     font-weight: 700;
     font-size: 9.6rem;
     color: $kasa-red;
@@ -17,7 +20,7 @@
     }
   }
 
-  .message-404 {
+  .error-message {
     width: 260px;
     height: 52px;
     font-weight: 500;
@@ -47,6 +50,7 @@
     @media screen and (min-width: $sm) {
       width: 100%;
       font-size: 1.8rem;
+      padding-block: 100px;
     }
   }
 }
