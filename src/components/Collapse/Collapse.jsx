@@ -16,22 +16,24 @@ export default function Collapse({ heading, text }) {
 
   return (
     <>
-      <div className="collapse__heading-block">
-        <h2 className={`collapse__heading`}>{heading}</h2>
-        <button className="collapse-button" onClick={toggleIsCollapsed}>
-          <img
-            className={`collapse-button__icon ${iconAnimation}`}
-            src={iconUrl}
-            alt="toggle icon"
-          />
-        </button>
+      <div className="collapse">
+        <div className="collapse__heading-block">
+          <h2 className={`collapse__heading`}>{heading}</h2>
+          <button className="collapse-button" onClick={toggleIsCollapsed}>
+            <img
+              className={`collapse-button__icon ${iconAnimation}`}
+              src={iconUrl}
+              alt="toggle icon"
+            />
+          </button>
+        </div>
+        <div className={`collapse__text ${boxAnimation}`}>{text}</div>
       </div>
-      <div className={`collapse__text ${boxAnimation}`}>{text}</div>
     </>
   );
 }
 
 Collapse.propTypes = {
   heading: PropTypes.string.isRequired,
-  text: PropTypes.object.isRequired,
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 };

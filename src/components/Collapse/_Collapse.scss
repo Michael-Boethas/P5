@@ -1,72 +1,87 @@
-.collapse__heading-block {
-  display: flex;
-  justify-content: space-between;
-  color: $collapsible-text-color;
-  background: $kasa-red;
-  border-radius: 5px;
-  height: 30px;
-  padding: 10px 10px 0 10px;
-  .collapse__heading {
-    font-size: 1.3rem;
-  }
-
-  @media screen and (min-width: $sm) {
-    margin: 0 10%;
-    height: 54px;
-    font-size: 1.5rem;
-  }
-
-  .collapse-button__icon {
-    width: 16px;
-    height: 9px;
-
-    &:hover {
-      cursor: pointer;
+.collapse {
+  width: 100%;
+  .collapse__heading-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $collapsible-text-color;
+    background: $kasa-red;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 10px;
+    flex-grow: 1;
+    .collapse__heading {
+      font-size: 1.3rem;
     }
-
+  
     @media screen and (min-width: $sm) {
-      width: 24px;
-      height: 13px;
+      height: 35px;
+      font-size: 1.5rem;
+    }
+    @media screen and (min-width: $md) {
+      height: 45px;
+    }
+    @media screen and (min-width: $lg) {
+      height: 52px;
+    }
+  
+    .collapse-button__icon {
+      width: 16px;
+      height: 9px;
+  
+      &:hover {
+        cursor: pointer;
+      }
+  
+      @media screen and (min-width: $sm) {
+        width: 24px;
+        height: 13px;
+      }
     }
   }
-}
-
-.collapse__text {
-  max-height: 0;
-  overflow: hidden;
-  background: $content-bg-color;
-  margin: 0 0 20px 0;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  line-height: 142.6%;
-  padding-inline: 10px;
-
-  @media screen and (min-width: $sm) {
-    margin: 0 10% 20px 10%;
-    font-size: 1.6rem;
+  
+  .collapse__text {
+    max-height: 0;
+    overflow: hidden;
+    background: $content-bg-color;
+    margin: 0 0 20px 0;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    line-height: 142.6%;
+    padding-inline: 10px;
+  
+    ul {
+      list-style-type: none;
+    }
+  
+    @media screen and (min-width: $sm) {
+      margin: 0 10% 20px 10%;
+      font-size: 1.6rem;
+    }
   }
-}
-
-.section--collapsed {
-  transition: padding-block 400ms ease;
-  max-height: 0;
-  padding-block: 0;
-}
-
-.section--expanded {
-  transition:
-    max-height 600ms ease,
-    padding-block 600ms ease;
-  max-height: 500px;
-  padding-block: 10px;
-}
-
-.icon--collapsed {
-  transform: rotate(0);
-  transition: transform 600ms;
-}
-
-.icon--expanded {
-  transform: rotate(-180deg);
-  transition: transform 600ms;
+  
+  .section--collapsed {
+    transition: padding-block 400ms ease;
+    max-height: 0;
+    padding-block: 0;
+  }
+  
+  .section--expanded {
+    transition:
+      max-height 600ms ease,
+      padding-block 600ms ease;
+    max-height: 500px;
+    padding-block: 10px;
+  }
+  
+  .icon--collapsed {
+    transform: rotate(0);
+    transition: transform 600ms;
+  }
+  
+  .icon--expanded {
+    transform: rotate(-180deg);
+    transition: transform 600ms;
+  }
+  
 }

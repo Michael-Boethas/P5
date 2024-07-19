@@ -4,6 +4,7 @@ import Collapse from "../../components/Collapse/Collapse";
 import Rating from "../../components/Rating/Rating";
 import Host from "../../components/Host/Host";
 import rentalsList from "../../data/logements.json";
+import Slideshow from "../../components/Slideshow/Slideshow";
 
 export default function RentalPage() {
   const { id } = useParams();
@@ -16,6 +17,7 @@ export default function RentalPage() {
 
   return (
     <>
+      <Slideshow pictures={rentalInfo.pictures} />
       <section className="rental__info-section">
         <div className="rental__title-tags-container">
           <h1 className="rental__title">{rentalInfo.title}</h1>
@@ -32,7 +34,7 @@ export default function RentalPage() {
           <Rating rating={rentalInfo.rating} />
           <Host name={rentalInfo.host.name} picture={rentalInfo.host.picture} />
         </div>
-        <div className="rental__info-container">
+        <div className="rental__collapse-container">
           <Collapse
             heading="Description"
             text={<p>{rentalInfo.description}</p>}

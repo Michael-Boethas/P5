@@ -2,7 +2,9 @@
   width: 100%;
   display: flex;
   flex-flow: column;
+  align-items: flex-start;
   flex-grow: 1;
+  gap: 15px;
 
   .rental__title-tags-container {
     display: flex;
@@ -41,7 +43,24 @@
   }
 
   .rental__host-rating-container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: $sm) {
+      flex-flow: column-reverse;
+    }
+  }
+
+  .rental__collapse-container {
+    display: flex;
+    flex-flow: column;
+    @media screen and (min-width: $sm) {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      gap: 100px;
+    }
   }
 }
