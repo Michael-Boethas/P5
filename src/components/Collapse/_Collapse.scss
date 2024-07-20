@@ -48,6 +48,7 @@
   .collapse__text {
     max-height: 0;
     overflow: hidden;
+    transition: transform 600ms;
     background: $content-bg-color;
     margin: 0 0 20px 0;
     border-radius: 5px;
@@ -80,11 +81,9 @@
 
   .icon--collapsed {
     transform: rotate(0);
-    transition: transform 600ms;
   }
 
   .icon--expanded {
     transform: rotate(-180deg);
-    transition: transform 600ms;
   }
 }

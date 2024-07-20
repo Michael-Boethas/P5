@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import Collapse from "../../components/Collapse/Collapse";
 import Rating from "../../components/Rating/Rating";
 import Host from "../../components/Host/Host";
@@ -8,23 +8,27 @@ import Slideshow from "../../components/Slideshow/Slideshow";
 
 export default function RentalPage() {
   const { rentalId } = useParams();
+  const rental = rentalsList.find((rental) => rental.id === rentalId);
 
-  const rentalInfo = rentalsList.find((rental) => rental.id === rentalId);
+  if (!rental) {
+    return <Navigate to="/404" />;
+  }
+
   // Découpage du tableau en une liste pour l'affichage
-  const equipmentsList = rentalInfo.equipments.map((equipment, index) => (
+  const equipmentsList = rental.equipments.map((equipment, index) => (
     <li key={index}>{equipment}</li>
   ));
 
   return (
     <>
-      <Slideshow pictures={rentalInfo.pictures} />
+      <Slideshow pictures={rental.pictures} />
       <section className="rental-page__info-section">
         <div className="rental-page__summary">
           <header className="rental-page__header">
-            <h1 className="rental-page__title">{rentalInfo.title}</h1>
-            <span className="rental-page__location">{rentalInfo.location}</span>
+            <h1 className="rental-page__title">{rental.title}</h1>
+            <span className="rental-page__location">{rental.location}</span>
             <div className="rental-page__tags">
-              {rentalInfo.tags.map((tag, index) => (
+              {rental.tags.map((tag, index) => (
                 <span className="rental-page__tag" key={index}>
                   {tag}
                 </span>
@@ -32,18 +36,12 @@ export default function RentalPage() {
             </div>
           </header>
           <div className="rental-page__host-rating">
-            <Rating rating={rentalInfo.rating} />
-            <Host
-              name={rentalInfo.host.name}
-              picture={rentalInfo.host.picture}
-            />
+            <Rating rating={rental.rating} />
+            <Host name={rental.host.name} picture={rental.host.picture} />
           </div>
         </div>
         <div className="rental-page__collapse-container">
-          <Collapse
-            heading="Description"
-            text={<p>{rentalInfo.description}</p>}
-          />
+          <Collapse heading="Description" text={<p>{rental.description}</p>} />
           <Collapse heading="Équipements" text={<ul>{equipmentsList}</ul>} />
         </div>
       </section>

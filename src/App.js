@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import RentalPage from "./pages/RentalPage/RentalPage";
@@ -20,7 +20,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/rental/:rentalId" element={<RentalPage />} />
-          <Route path="*" element={<Error404 />} />
+          <Route path="/404" element={<Error404 />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
       </main>
       <Footer />
