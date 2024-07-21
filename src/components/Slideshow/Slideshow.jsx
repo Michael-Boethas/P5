@@ -1,38 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { useState } from "react";
 import iconPrev from "../../assets/slideshow-prev.svg";
 import iconNext from "../../assets/slideshow-next.svg";
 
 export default function Slideshow({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slideDirection, setSlideDirection] = useState("");
+  const [isDisabled, setIsDisabled] = useState(false);
   const showControls = pictures.length > 1;
 
   function prevSlide() {
-    setCurrentIndex(
-      currentIndex === 0 ? pictures.length - 1 : currentIndex - 1,
-    );
+    if (isDisabled) return;
+    setSlideDirection("prev-slide");
+    setIsDisabled(true);
+    setCurrentIndex((index) => (index === 0 ? pictures.length - 1 : index - 1));
   }
 
   function nextSlide() {
-    setCurrentIndex(
-      currentIndex === pictures.length - 1 ? 0 : currentIndex + 1,
-    );
+    if (isDisabled) return;
+    setSlideDirection("next-slide");
+    setIsDisabled(true);
+    setCurrentIndex((index) => (index === pictures.length - 1 ? 0 : index + 1));
   }
 
   return (
     <div className="slideshow">
       <img
-        className="current-slide"
+        className={`current-slide ${slideDirection}`}
         src={pictures[currentIndex]}
-        alt={"Photo " + (currentIndex + 1) + "/" + pictures.length}
+        alt={`Photo ${currentIndex + 1}/${pictures.length}`}
+        onAnimationEnd={() => {
+          setSlideDirection("");
+          setIsDisabled(false);
+        }}
       />
       {showControls ? (
         <>
-          <button className="prev-button" onClick={prevSlide}>
+          <button
+            className="prev-button"
+            onClick={prevSlide}
+            disabled={isDisabled}
+          >
             <img src={iconPrev} alt="Previous" />
           </button>
-          <button className="next-button" onClick={nextSlide}>
+          <button
+            className="next-button"
+            onClick={nextSlide}
+            disabled={isDisabled}
+          >
             <img src={iconNext} alt="Next" />
           </button>
           <span className="slide-number">
