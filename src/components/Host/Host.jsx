@@ -5,7 +5,7 @@ export default function Host({ name, picture }) {
   return (
     <figure className="rental__host">
       <figcaption className="host__name">{name}</figcaption>
-      <img className="host__picture" src={picture} alt="photo de l'Hôte" />
+      <img className="host__picture" src={picture} alt={"Hôte: " + name} />
     </figure>
   );
 }

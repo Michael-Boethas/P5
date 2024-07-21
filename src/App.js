@@ -10,12 +10,18 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <div className="App">
+
+      {/* Message d'avertissement pour les écrans inadaptés */}
       <div className="viewport-warning">
         <span className="viewport-warning__icon">⚠️</span>Cette page n&#39;est
         pas optimisée pour les écrans de largeur inférieure à 320px
       </div>
+
       <Header />
+
       <main className="main">
+        {/* Routeur qui gère l'affichage des différents contenus de
+         l'application entre le header et le footer statiques*/}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -24,7 +30,9 @@ function App() {
           <Route path="*" element={<Navigate to="/404" replace />} />
         </Routes>
       </main>
+
       <Footer />
+      
     </div>
   );
 }
