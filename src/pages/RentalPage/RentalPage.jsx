@@ -21,7 +21,7 @@ export default function RentalPage() {
 
   return (
     <>
-      <Slideshow pictures={rental.pictures} />
+      <Slideshow picturesUrl={rental.pictures} />
       <section className="rental-page__info-section">
         <div className="rental-page__summary">
           <header className="rental-page__header">
