@@ -28,7 +28,7 @@ export default function Slideshow({ pictures }) {
       <img
         className={`current-slide ${slideDirection}`}
         src={pictures[currentIndex]}
-        alt={`${currentIndex + 1}/${pictures.length}`}
+        alt={`Slide ${currentIndex + 1}/${pictures.length}`}
         onAnimationEnd={() => {
           setSlideDirection("");
           setIsDisabled(false);
