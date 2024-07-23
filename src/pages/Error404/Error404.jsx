@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 export default function Error404() {
   return (
     <div className="error-container">
-      <span className="error-code">404</span>
-      <p className="error-message">
+      <h1 className="error-code">404</h1>
+      <h2 className="error-message">
         Oups! La page que <br /> vous demandez n&#39;existe pas.
-      </p>
-      <Link to="/" className="link-home">
+      </h2>
+      <Link to="/" className="link-home">     {/* Lien de navigation vers la page d'accueil */}
         Retourner sur la page d’accueil
       </Link>
     </div>

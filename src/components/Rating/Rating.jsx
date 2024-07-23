@@ -5,6 +5,8 @@ import greyStar from "../../assets/star-grey.svg";
 
 export default function Rating({ rating }) {
   const stars = [];
+
+  // Attribution d`étoiles rouges complétées d'étoiles grises en fonction de la note du logement
   for (let i = 1; i <= 5; i++) {
     if (i <= rating) {
       stars.push(<img key={i} src={redStar} alt="red star" />);

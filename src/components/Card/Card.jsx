@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export default function Card({ data }) {
+export default function Card({ data }) {    // Réception des données du logement
   return (
-    <Link to={`/rental/${data.id}`} className="card__link-rental">
+    <Link to={`/rental/${data.id}`} className="card__link-rental">    {/* Lien vers le logement correspondant à la carte selectionnée */}
       <figure className="gallery__card">
         <img
           className="card__img-preview"

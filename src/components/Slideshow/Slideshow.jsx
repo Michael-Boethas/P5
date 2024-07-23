@@ -6,10 +6,10 @@ import iconNext from "../../assets/slideshow-next.svg";
 export default function Slideshow({ picturesUrl }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState("");
-  const showControls = picturesUrl.length > 1;               //Affichage des boutons de navigation
-  const [isDisabled, setIsDisabled] = useState(true);         // Gestion de l'activation de la navigation
+  const showControls = picturesUrl.length > 1;
+  const [isDisabled, setIsDisabled] = useState(true); // Gestion de la fonctionnalité navigation
 
-  // Chargement anticipé des images afin d'éviter un bug d'affichage lors de l'animation du slideshow
+  // Chargement anticipé des photos afin d'éviter un bug d'affichage lors de l'animation du slideshow
   useEffect(() => {
     (async () => {
       const slidesPreload = picturesUrl.map((url) => {
@@ -19,15 +19,20 @@ export default function Slideshow({ picturesUrl }) {
           img.onload = resolve;
         });
       });
-      await Promise.all(slidesPreload);
-      setIsDisabled(false);
+      try {
+        await Promise.all(slidesPreload); // Attente de la résolution de l'ensemble des promises
+        setIsDisabled(false); // Activation des boutons de navigation après chargement de toutes les photos
+      } catch (error) {
+        window.alert("Erreur lors du chargement des photos");
+        console.log("Error loading slideshow images: ", error);
+      }
     })();
-  }, []); // Uniquement au premier render
+  }, [picturesUrl]);
 
   function prevSlide() {
-    if (isDisabled) return;
-    setSlideDirection("prev-slide");
-    setIsDisabled(true);
+    if (isDisabled) return; // Fonctionnalité désactivée
+    setSlideDirection("prev-slide"); // Sélection de l'animation en fonction du bouton cliqué
+    setIsDisabled(true); // Désactivation de la fonctionnalité pour la durée de l'animation
     setCurrentIndex((index) =>
       index === 0 ? picturesUrl.length - 1 : index - 1
     );
@@ -43,17 +48,18 @@ export default function Slideshow({ picturesUrl }) {
   }
 
   return (
-    <div className="slideshow">
+    <figure className="slideshow">
       <img
-        className={`current-slide ${slideDirection}`}
+        className={`current-slide ${slideDirection}`} // Attribution de la classe pour l'animation
         src={picturesUrl[currentIndex]}
         alt={`Slide ${currentIndex + 1}/${picturesUrl.length}`}
         onAnimationEnd={() => {
+          // Réinitialisation des paramètres en fin d'animation
           setSlideDirection("");
           setIsDisabled(false);
         }}
       />
-      {showControls ? (
+      {showControls ? ( // Affichage conditionnel des boutons de navigation
         <>
           <button
             className="prev-button"
@@ -69,12 +75,12 @@ export default function Slideshow({ picturesUrl }) {
           >
             <img src={iconNext} alt="Next" />
           </button>
-          <span className="slide-number">
-            {currentIndex + 1}/{picturesUrl.length}
-          </span>
+          <figcaption className="slide-number">
+            {currentIndex + 1}/{picturesUrl.length}    {/* Affichage dynamique du numéro du slide actuel */}
+          </figcaption>
         </>
       ) : null}
-    </div>
+    </figure>
   );
 }
 

@@ -27,7 +27,7 @@ body {
 
     .header,
     .main {
-      max-width: $max-content-width;
+      max-width: $max-content-width;    // Limitation de la largeur du contenu pour les grands écrans
       background: $main-bg-color;
       margin: 0 auto;
       padding: 20px 20px 0 20px;
@@ -53,14 +53,14 @@ body {
       font-weight: 700;
       color: #fff;
       background: $kasa-red;
-      border: 3px solid #777;
+      border: 2px solid #e4ae26;
 
       .viewport-warning__icon {
         font-size: 3rem;
       }
 
       @media screen and (min-width: 320px) {
-        display: none;
+        display: none;    // Dissimulation  de la bannière d'avertissement
       }
     }
   }

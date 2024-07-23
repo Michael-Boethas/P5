@@ -17,21 +17,21 @@ function App() {
         pas optimisée pour les écrans de largeur inférieure à 320px
       </div>
 
-      <Header />
+      <Header />   {/* Header statique */}
 
       <main className="main">
         {/* Routeur qui gère l'affichage des différents contenus de
          l'application entre le header et le footer statiques*/}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />   {/* Route racine */}
           <Route path="/about" element={<About />} />
-          <Route path="/rental/:rentalId" element={<RentalPage />} />
+          <Route path="/rental/:rentalId" element={<RentalPage />} /> {/* Route paramétrée avec l'identifiant du logement */}
           <Route path="/404" element={<Error404 />} />
-          <Route path="*" element={<Navigate to="/404" replace />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />   {/* Redirection vers la page d'erreur 404 */}
         </Routes>
       </main>
 
-      <Footer />
+      <Footer />    {/* Footer statique */}
       
     </div>
   );

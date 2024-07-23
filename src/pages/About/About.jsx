@@ -8,7 +8,7 @@ export default function About() {
     <>
       <Banner page="about" />
       <section className="about-section">
-        {aboutList.map((aboutSection) => (
+        {aboutList.map((aboutSection) => (    // Itération sur une liste de rubriques "à propos"
           <Collapse
             key={aboutSection.heading}
             heading={aboutSection.heading}

@@ -5,7 +5,7 @@ import Gallery from "../../components/Gallery/Gallery";
 export default function Home() {
   return (
     <>
-      <Banner page="home" />
+      <Banner page="home" />   {/* props permettant d'adapter la bannière*/}
       <Gallery />
     </>
   );
