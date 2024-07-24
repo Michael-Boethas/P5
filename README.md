@@ -5,10 +5,10 @@
 Bienvenue dans le dépôt GitHub du projet Kasa. Kasa est une plateforme de location d'appartements entre particuliers, et ce projet est la refonte complète de l'application front-end en utilisant React.
 
 ## Table des Matières
-- [Description](#description)
-- [Outils](#technologies)
-- [Installation](#installation)
-- [License](#license)
+- [Description](#-Description)
+- [Outils](#-Outils)
+- [Installation](#-Installation)
+- [License](#-License)
 
 ## 📄 Description
 
@@ -22,7 +22,7 @@ Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de 
 - **Create-React-App (5.0.1)** : Utilisé pour initialiser et configurer l'application React.
     https://create-react-app.dev/
     https://github.com/facebook/create-react-app
-- **React Router (6.24.0)** : Utilisé pour gérer le routage de l'application .
+- **React Router (6.24.0)** : Utilisé pour gérer le routage de l'application.
     https://reactrouter.com/en/main
     https://github.com/remix-run/react-router
 - **Sass (1.77.6)** : Pour structurer le CSS.
@@ -32,8 +32,8 @@ Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de 
 
 1. Clonez le dépôt :
     ```bash
-    git clone https://github.com/votre-utilisateur/kasa.git
-    cd kasa
+    git clone https://github.com/michael-boethas/p5-kasa.git
+    cd p5-kasa
     ```
 
 2. Installez les dépendances :
