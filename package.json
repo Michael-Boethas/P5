@@ -12,6 +12,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
+    "pre-deploy": "npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "pretty": "prettier --write \"**/*.{js,jsx,scss}\"",
@@ -40,8 +42,10 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
+    "gh-pages": "^6.1.1",
     "globals": "^15.8.0",
     "prettier": "^3.3.2",
-    "sass": "^1.77.6"
+    "sass": "^1.77.6",
+    "vercel": "^35.1.0"
   }
 }
