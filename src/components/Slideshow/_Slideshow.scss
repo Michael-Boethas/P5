@@ -37,6 +37,10 @@
     img {
       width: 12px;
       height: 20px;
+      &:hover  {
+        transform: scale(1.1);
+        transition: transform 300ms ease;
+      }
       @media screen and (min-width: $sm) {
         width: 47px;
         height: 79px;
@@ -69,32 +73,46 @@
   }
 }
 
+
 @keyframes slide-right {
   0% {
     left: -100%;
-    transform: scale(0.33);
   }
   100% {
     left: 0;
-    transform: scale(1);
   }
 }
 
 @keyframes slide-left {
   0% {
     right: -100%;
-    transform: scaleY(0.33);
   }
   100% {
     right: 0;
-    transform: scaleY(1);
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.33);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
 .prev-slide {
-  animation: slide-left 600ms cubic-bezier(0.2, 0.18, 0, 1);
+  animation: slide-left 600ms cubic-bezier(0.2, 0.18, 0, 1), zoom-in 600ms ease;
+  @media screen and (min-width: $sm) {
+    animation: slide-left 600ms cubic-bezier(0.2, 0.18, 0, 1); 
+  }
 }
 
 .next-slide {
-  animation: slide-right 600ms cubic-bezier(0.2, 0.18, 0, 1);
+  animation: slide-right 600ms cubic-bezier(0.2, 0.18, 0, 1), zoom-in 600ms ease;
+  @media screen and (min-width: $sm) {
+    animation: slide-right 600ms cubic-bezier(0.2, 0.18, 0, 1); 
+  }
 }

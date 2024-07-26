@@ -38,7 +38,7 @@ body {
       height: 100%;
       @include flex-center;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: flex-start;
       flex-grow: 1;
     }
 
@@ -63,5 +63,16 @@ body {
         display: none;    // Dissimulation  de la bannière d'avertissement
       }
     }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }

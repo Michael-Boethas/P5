@@ -19,12 +19,12 @@ Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de 
 - **npm** : Gestionnaire de packages pour installer les dépendances JavaScript.
 - **Node.js (v20.15.0)** : Environnement d'exécution JavaScript.
 - **React (18.3.1)** : Bibliothèque pour le front-end.
-- **Create-React-App (5.0.1)** : Utilisé pour initialiser et configurer l'application React.
-    https://create-react-app.dev/
-    https://github.com/facebook/create-react-app
-- **React Router (6.24.0)** : Utilisé pour gérer le routage de l'application.
-    https://reactrouter.com/en/main
-    https://github.com/remix-run/react-router
+- **Create-React-App (5.0.1)** : Utilisé pour initialiser et configurer l'application React. <br>
+    https://create-react-app.dev/ <br>
+    https://github.com/facebook/create-react-app <br>
+- **React Router (6.24.0)** : Utilisé pour gérer le routage de l'application. <br>
+    https://reactrouter.com/en/main <br>
+    https://github.com/remix-run/react-router <br>
 - **Sass (1.77.6)** : Pour structurer le CSS.
 - **ESLint (8.57.0)** et **Prettier (9.7.0)** : Pour des conventions de codage cohérentes.
 

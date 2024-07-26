@@ -20,7 +20,9 @@
 
       @media screen and (min-width: $sm) {
         width: 100%;
+        font-size: 48px;
         text-align: center;
+        animation: fade-in 600ms ease-in;
       }
     }
   }

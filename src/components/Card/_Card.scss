@@ -3,11 +3,19 @@
   width: calc(100vw - 40px);
   min-width: 315px;
   height: 255px;
+  border-radius: 10px;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: transform 300ms ease;
+    box-shadow: 2px 5px 10px 3px rgba(0, 0, 0, .2);
+  }
 
   @media screen and (min-width: $sm) {
     min-width: unset;
     width: 40vw;
     height: 250px;
+    animation: fade-in 300ms ease-in;
   }
 
   @media screen and (min-width: $lg) {
@@ -44,3 +52,4 @@
     padding: 10px;
   }
 }
+
