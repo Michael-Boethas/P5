@@ -27,7 +27,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/rental/:rentalId" element={<RentalPage />} /> {/* Route paramétrée avec l'identifiant du logement */}
           <Route path="/404" element={<Error404 />} />
-          <Route path="*" element={<Navigate to="/404" replace />} />   {/* Redirection vers la page d'erreur 404 */}
+          <Route path="*" element={<Navigate to="/404" replace />} />   {/* Redirection vers la page d'erreur 404 (sans conserver l'url non valide en mémoire)*/}
         </Routes>
       </main>
 
