@@ -11,7 +11,7 @@ export default function RentalPage() {
   const rental = rentalsList.find((rental) => rental.id === rentalId); // Recherche de l'id dans la liste des logements
 
   if (!rental) {
-    return <Navigate to="/404" />; // Redirection vers la page d'accueil en cas d'id non valide
+    return <Navigate to="/404" />; // Redirection vers la page d'erreur en cas d'id non valide
   }
 
   // Découpage du tableau en une liste pour l'affichage dans le dropdown
