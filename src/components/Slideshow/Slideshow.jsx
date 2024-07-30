@@ -11,12 +11,13 @@ export default function Slideshow({ picturesUrl }) {
 
   // Chargement anticipé des photos afin d'éviter un bug d'affichage lors de l'animation du slideshow
   useEffect(() => {
-    (async () => {
+    (async () => {    // IIFE asynchrone
       const slidesPreload = picturesUrl.map((url) => {
-        return new Promise((resolve) => {
+        return new Promise((resolve, reject) => {
           const img = new Image();
           img.src = url;
           img.onload = resolve;
+          img.onerror = reject;
         });
       });
       try {
