@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../Card/Card";
-import rentalsList from "../../data/logements.json";
+import rentalsList from "../../data/logements.json";  // À remplacer par le backend lorsqu'il sera disponible
 
 export default function Gallery() {
   return (

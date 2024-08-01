@@ -12,7 +12,7 @@ function App() {
         pas optimisée pour les écrans de largeur inférieure à 320px
       </div>
       <Header /> {/* Header statique */}
-      <main className="main">
+      <main className="main">  {/* Contenu à afficher */}
         <Router />
       </main>
       <Footer /> {/* Footer statique */}

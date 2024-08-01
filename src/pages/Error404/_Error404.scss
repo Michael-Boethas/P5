@@ -16,6 +16,9 @@
     color: $kasa-red;
 
     @media screen and (min-width: $sm) {
+      font-size: 25rem;
+    }
+    @media screen and (min-width: $md) {
       font-size: 28.8rem;
     }
   }

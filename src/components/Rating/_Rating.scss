@@ -3,6 +3,9 @@
     height: 13px;
     padding-right: 5px;
     @media screen and (min-width: $sm) {
+      height: 18px;
+    }
+    @media screen and (min-width: $md) {
       height: 24px;
     }
   }

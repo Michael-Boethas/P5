@@ -11,7 +11,7 @@ export default function About() {
         {aboutList.map((aboutSection) => (    // Itération sur une liste de rubriques "à propos"
           <Collapse
             key={aboutSection.heading}
-            heading={aboutSection.heading}
+            heading={aboutSection.heading}   // Props pour la différentiation des dropdowns
             text={aboutSection.text}
           />
         ))}
