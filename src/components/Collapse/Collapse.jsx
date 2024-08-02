@@ -25,7 +25,7 @@ export default function Collapse({ heading, text }) {
           />
         </button>
       </div>
-      <div className={`collapse__text ${boxAnimation}`}>{text}</div> {/* Affichage du heading en props */}
+      <div className={`collapse__text ${boxAnimation}`}>{text}</div> {/* Affichage du texte en props */}
     </div>
   );
 }
